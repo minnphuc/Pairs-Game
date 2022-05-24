@@ -1,0 +1,98 @@
+:root {
+  --victory: #ece236;
+  --green: #c1d72e;
+  --blue: #82d2e5;
+  --grey: #f3f3f3;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--white);
+  margin-top: 4rem;
+}
+
+.instruction {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.timer {
+  font-size: 2rem;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.card_container {
+  width: 70%;
+  padding-left: 4rem;
+  margin-top: 1rem;
+}
+
+.card {
+  display: inline-block;
+  width: 12rem;
+  aspect-ratio: 1/1.5;
+  margin-right: 4rem;
+  margin-bottom: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 800ms ease;
+  transform-style: preserve-3d;
+}
+
+.card_back,
+.card_front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card_back {
+  transform: rotateY(180deg);
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  transition: all 300ms ease;
+}
+
+.card_back img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
