@@ -24,29 +24,63 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 800ms ease;
 }
 
 .title {
   font-size: 4rem;
   color: var(--white);
-  margin-top: 4rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.result {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-top: 1rem;
+  font-weight: 700;
+  font-family: "Press Start 2P", cursive;
 }
 
 .instruction {
-  font-size: 2.5rem;
-  color: var(--white);
-  margin-top: 2rem;
-}
-
-.timer {
   font-size: 2rem;
   color: var(--white);
   margin-top: 1rem;
 }
 
+.chance {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.resetBtn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Press Start 2P", cursive;
+  color: var(--white);
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  background-color: rebeccapurple;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.resetBtn:hover {
+  opacity: 0.85;
+}
+
+/* CARD */
+
 .card_container {
   width: 70%;
-  padding-left: 4rem;
+  padding-left: 3.5rem;
   margin-top: 1rem;
 }
 
@@ -95,4 +129,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  opacity: 0;
 }
